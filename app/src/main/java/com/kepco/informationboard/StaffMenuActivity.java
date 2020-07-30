@@ -14,8 +14,17 @@ public class StaffMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_menu);
 
-        Button button = findViewById(R.id.btn_home);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btnHome = findViewById(R.id.btn_home);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                setResult(100, intent);
+                finish();
+            }
+        });
+        Button btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
