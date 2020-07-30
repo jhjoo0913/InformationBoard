@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * intro class
  */
 public class IntroActivity extends AppCompatActivity {
-    private static final int DELAY_TIME = 4000;
+    private static final int DELAY_TIME = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class IntroActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
                 startActivity(intent);
                 finish();
             }
