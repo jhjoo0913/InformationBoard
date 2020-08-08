@@ -17,18 +17,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".VisitorMapActivity"
-            android:label=""
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity
-            android:name=".VisitorMenuActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".StaffMenuActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".MainMenuActivity"
             android:screenOrientation="landscape" />
         <activity
             android:name=".IntroActivity"

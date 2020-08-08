@@ -24,7 +24,7 @@ public class IntroActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StaffMenuActivity.class);
                 startActivity(intent);
                 finish();
             }
