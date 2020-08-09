@@ -7,12 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class StaffMenuActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_staff_menu);
+        setContentView(R.layout.activity_main);
 
         Button btnHome = findViewById(R.id.btn_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +32,7 @@ public class StaffMenuActivity extends AppCompatActivity {
                 finish();
             }
         });
-        Button button1 = findViewById(R.id.button_staff2);
+        Button button1 = findViewById(R.id.btn_floor_plan);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

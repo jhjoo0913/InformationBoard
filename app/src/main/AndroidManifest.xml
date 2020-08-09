@@ -14,14 +14,9 @@
         <activity
             android:name=".FloorPlanActivity"
             android:label=""
-            android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity
-            android:name=".StaffMenuActivity"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".IntroActivity"
-            android:screenOrientation="landscape">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

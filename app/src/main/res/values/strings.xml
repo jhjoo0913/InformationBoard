@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">안내판</string>
     <string name="ImageError">이미지가 열리지 않습니다</string>
+    <string name="main_btn_circuit">단선도</string>
+    <string name="main_btn_floor_plan">도 면</string>
+    <string name="main_btn_tm">TM 관리</string>
+    <string name="main_btn_construction_doc">공사 관련 서류</string>
+    <string name="main_btn_trouble_case">유사 고장 사례</string>
 </resources>

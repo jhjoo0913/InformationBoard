@@ -4,166 +4,145 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 메뉴 아이콘 영역 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- 상단 메뉴 아이콘 영역-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="25dp">
 
             <LinearLayout
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_staff1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/btn_circuit"
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
                     android:layout_gravity="center"
-                    android:background="@drawable/staff_menu_circuit" />
+                    android:background="@drawable/main_btn_circuit_unselected" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/custom"
-                    android:text="단선도"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/main_btn_text_style"
+                    android:text="@string/main_btn_circuit"
+                    android:fontFamily="@font/custom"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_staff2"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/btn_floor_plan"
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_floor_plan" />
+                    android:background="@drawable/main_btn_circuit_unselected" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/custom"
-                    android:text="도 면"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/main_btn_text_style"
+                    android:text="@string/main_btn_floor_plan"
+                    android:fontFamily="@font/custom"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_staff3"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/btn_tm"
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_tm_manage" />
+                    android:background="@drawable/main_btn_circuit_unselected" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/custom"
-                    android:text="TM 관리"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/main_btn_text_style"
+                    android:text="@string/main_btn_tm"
+                    android:fontFamily="@font/custom"/>
             </LinearLayout>
         </LinearLayout>
 
+        <!-- 하단 메뉴 아이콘 영역 -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="100dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_staff4"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/btn_construction_doc"
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_construction_doc" />
+                    android:background="@drawable/main_btn_circuit_unselected" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/custom"
-                    android:text="공사 관련 서류"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/main_btn_text_style"
+                    android:text="@string/main_btn_construction_doc"
+                    android:fontFamily="@font/custom"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="50dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_staff5"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/btn_trouble_case"
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_trouble_case" />
+                    android:background="@drawable/main_btn_circuit_unselected" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/custom"
-                    android:text="유사 고장 사례"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    style="@style/main_btn_text_style"
+                    android:text="@string/main_btn_trouble_case"
+                    android:fontFamily="@font/custom"/>
             </LinearLayout>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="100dp"
-                android:layout_weight="1"
-                android:background="#00000000" />
-
         </LinearLayout>
     </LinearLayout>
 
