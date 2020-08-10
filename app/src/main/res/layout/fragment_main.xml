@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#034078">
+
+    <!-- toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumgothic"
+                android:text="서종변전소 종합정보안내 시스템"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 메인 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_toolbar"
+        android:background="@drawable/main_base"
+        android:orientation="vertical">
+
+        <!-- 메뉴 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 상단 메뉴 아이콘 영역-->
+            <LinearLayout
+                android:id="@+id/layout_menu_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_circuit"
+                        android:layout_width="@dimen/main_btn_width"
+                        android:layout_height="@dimen/main_btn_height"
+                        android:layout_gravity="center"
+                        android:background="@drawable/main_btn_circuit_unselected" />
+
+                    <TextView
+                        style="@style/main_btn_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/circuit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_floor_plan"
+                        android:layout_width="@dimen/main_btn_width"
+                        android:layout_height="@dimen/main_btn_height"
+                        android:layout_gravity="center"
+                        android:background="@drawable/main_btn_floor_plan_unselected" />
+
+                    <TextView
+                        style="@style/main_btn_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/floor_plan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_tm"
+                        android:layout_width="@dimen/main_btn_width"
+                        android:layout_height="@dimen/main_btn_height"
+                        android:layout_gravity="center"
+                        android:background="@drawable/main_btn_tm_unselected" />
+
+                    <TextView
+                        style="@style/main_btn_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/tm" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 하단 메뉴 아이콘 영역 -->
+            <LinearLayout
+                android:id="@+id/layout_menu_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_construction_doc"
+                        android:layout_width="@dimen/main_btn_width"
+                        android:layout_height="@dimen/main_btn_height"
+                        android:layout_gravity="center"
+                        android:background="@drawable/main_btn_construction_unselected" />
+
+                    <TextView
+                        style="@style/main_btn_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/construction_doc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_trouble_case"
+                        android:layout_width="@dimen/main_btn_width"
+                        android:layout_height="@dimen/main_btn_height"
+                        android:layout_gravity="center"
+                        android:background="@drawable/main_btn_trouble_case_unselected" />
+
+                    <TextView
+                        style="@style/main_btn_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/trouble_case" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/ImageError" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 하단 로고 영역 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_intro" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

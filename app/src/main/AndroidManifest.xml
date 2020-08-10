@@ -15,7 +15,7 @@
             android:name=".FloorPlanActivity"
             android:label=""
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".HomeMenu.MainActivity" />
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
