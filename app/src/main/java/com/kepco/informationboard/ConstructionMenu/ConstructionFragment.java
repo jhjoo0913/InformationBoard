@@ -16,7 +16,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import com.kepco.informationboard.HomeMenu.MainActivity;
+import com.kepco.informationboard.MainActivity;
 import com.kepco.informationboard.R;
 
 /**
@@ -47,12 +47,13 @@ public class ConstructionFragment extends Fragment {
         setUpToolbar(view);
         setHasOptionsMenu(true);
 
-        ListView tmFileList = view.findViewById(R.id.lv_tm_item);
+        ListView fileList = view.findViewById(R.id.lv_tm_item);
         ConstructionFileAdapter adapter = new ConstructionFileAdapter(context);
         adapter.addItem(new ConstructionFile(R.drawable.ic_folder, "공사 관련 비치 서류"));
         adapter.addItem(new ConstructionFile(R.drawable.ic_folder, "안전 관리 목록"));
         adapter.addItem(new ConstructionFile(R.drawable.ic_folder, "맞춤형 작업절차서"));
-        tmFileList.setAdapter(adapter);
+        fileList.setAdapter(adapter);
+
         return view;
     }
 

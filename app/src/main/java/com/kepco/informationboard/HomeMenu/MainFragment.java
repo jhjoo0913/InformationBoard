@@ -16,6 +16,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import com.kepco.informationboard.MainActivity;
 import com.kepco.informationboard.R;
 
 /**

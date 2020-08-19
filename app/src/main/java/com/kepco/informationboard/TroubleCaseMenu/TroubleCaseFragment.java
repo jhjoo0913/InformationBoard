@@ -8,7 +8,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import com.kepco.informationboard.ConstructionMenu.ConstructionFile;
 import com.kepco.informationboard.ConstructionMenu.ConstructionFileAdapter;
-import com.kepco.informationboard.HomeMenu.MainActivity;
+import com.kepco.informationboard.MainActivity;
 import com.kepco.informationboard.R;
 
 /**
@@ -47,11 +49,23 @@ public class TroubleCaseFragment extends Fragment {
 
         setHasOptionsMenu(true);
         setUpToolbar(rootView);
+        TextView titleText = rootView.findViewById(R.id.tv_title);
+        titleText.setText("유사 고장 사례");
 
-        ListView fileView = rootView.findViewById(R.id.lv_tm_item);
-        ConstructionFileAdapter adapter = new ConstructionFileAdapter(context);
-        adapter.addItem(new ConstructionFile(R.drawable.ic_pdf, "유사 고장 사례"));
-        fileView.setAdapter(adapter);
+        ListView fileList = rootView.findViewById(R.id.lv_tm_item);
+        final ConstructionFileAdapter adapter = new ConstructionFileAdapter(context);
+        adapter.addItem(new ConstructionFile(R.drawable.ic_pdf, "Github tutorial.pdf"));
+        adapter.addItem(new ConstructionFile(R.drawable.ic_pdf, "Java Code Conventions.pdf"));
+        fileList.setAdapter(adapter);
+
+        fileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ConstructionFile file = (ConstructionFile) adapter.getItem(position);
+                activity.showChooser(file.getFileName());
+            }
+        });
+
         return rootView;
     }
 
